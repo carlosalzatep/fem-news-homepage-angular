@@ -1,1 +1,88 @@
-/* You can add global styles to this file, and also import other style files */
+@use "./assets//styles/variables" as *;
+@use "./assets/styles/resets";
+@use "./assets/styles/mixins" as *;
+
+@font-face {
+	font-family: 'Inter';
+	src: url('/assets/fonts/Inter-VariableFont_slnt\,wght.ttf') format('ttf') tech('variations');
+  font-weight: var(--base-font-weights);
+}
+
+*:focus {
+  outline: 0;
+  box-shadow: 0 0 0 2px var(--primary-soft-orange);
+}
+
+body {
+  background-color: var(--neutral-almost-white);
+  color: var(--neutral-dark-grayish-blue);
+  font-family: var(--base-font-family);
+  font-size: rem(16px);
+  margin: auto;
+
+  @media screen and (width > $desktop-breakpoint) {
+    padding: 28px 0;
+  }
+}
+
+h1 {
+  color: var(--neutral-very-dark-blue);
+  font-size: rem(40px);
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1;
+}
+
+p {
+  font-size: rem(15px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: rem(26px);
+}
+
+a {
+  color: var(--neutral-very-dark-blue);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--primary-soft-red);
+  }
+}
+
+.btn {
+  color: var(--neutral-almost-white);
+  display: block;
+  font-size: rem(14px);
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 4.375px;
+  line-height: rem(24px);
+  padding: rem(13px) rem(35px) rem(11px) rem(31px);
+  text-transform: uppercase;
+  width: max-content;
+
+  &--primary {
+    background-color: var(--primary-soft-red);
+
+    &:hover {
+      background-color: var(--neutral-very-dark-blue);
+      color: var(--neutral-almost-white);
+    }
+  }
+}
+
+footer {
+  font-size: rem(12px);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

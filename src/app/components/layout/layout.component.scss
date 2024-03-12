@@ -1,0 +1,7 @@
+@use "../../../assets/styles/variables" as *;
+.layout {
+  margin: auto;
+  margin-top: 62px; // hacky margin just to fit Figma design
+  max-width: $desktop-width;
+  padding: 28px 16px;
+}
