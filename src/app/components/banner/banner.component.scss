@@ -1,0 +1,33 @@
+@use "../../../assets/styles/mixins" as *;
+@use "../../../assets/styles/variables" as *;
+
+.banner {
+  display: grid;
+  gap: rem(24px);
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    gap: rem(28px);
+  }
+
+  &__content {
+    display: grid;
+    gap: rem(16px);
+
+    .btn {
+      margin-top: rem(24px);
+    }
+
+    @media screen and (min-width: $desktop-breakpoint) {
+      gap: rem(30px);
+      grid-template-columns: 1fr 1fr;
+
+      .banner-content__title {
+        font-size: rem(56px);
+      }
+
+      .btn {
+        margin-top: rem(17px);
+      }
+    }
+  }
+}

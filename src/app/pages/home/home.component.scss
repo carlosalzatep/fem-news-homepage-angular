@@ -1,0 +1,14 @@
+@use "../../../assets/styles/mixins" as *;
+@use "../../../assets/styles/variables" as *;
+
+main {
+  display: grid;
+  gap: rem(64px);
+  padding: rem(32px) 0;
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    gap: rem(70px) rem(30px);
+    grid-template-columns: 1fr 350px;
+    padding: rem(55px) 0;
+  }
+}

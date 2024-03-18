@@ -1,0 +1,49 @@
+@use "../../../assets/styles/mixins" as *;
+@use "../../../assets/styles/variables" as *;
+
+.top-news {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: rem(31px);
+
+    @media screen and (min-width: $desktop-breakpoint) {
+      flex-direction: row;
+    }
+  }
+
+  &__item {
+    &-container {
+      display: flex;
+      gap: rem(25px);
+    }
+    .item__img {
+      width: 100px;
+    }
+    .item__content {
+      display: grid;
+      gap: rem(9px);
+    }
+    .item__number {
+      color: var(--neutral-grayish-blue);
+      font-size: rem(32px);
+      font-style: normal;
+      font-weight: 700;
+      line-height: rem(32px);
+      margin-bottom: rem(3px);
+    }
+    .item__title {
+      color: var(--neutral-very-dark-blue);
+      font-size: rem(17px);
+      font-style: normal;
+      font-weight: 800;
+      line-height: rem(24px);
+    }
+  }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  :host {
+    grid-column: span 2;
+  }
+}

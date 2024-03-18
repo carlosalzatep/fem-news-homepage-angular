@@ -1,12 +1,12 @@
 <header class="header">
   <img src="./assets/images/logo.svg" alt="W. logo" class="header__logo">
   <nav class="header__nav" aria-label="Home page">
-    <button id="js-open-button" class="nav__open-buttom">
+    <button (click)="openMenu(openButton)" #openButton class="nav__open-buttom">
       Open menu
       <img src="./assets/images/icon-menu.svg" alt="">
     </button>
     <div id="js-nav-menu" class="nav__menu">
-      <button id="js-close-button" class="menu__close">
+      <button (click)="closeMenu(openButton)" class="menu__close">
         Close menu
         <img src="./assets/images/icon-menu-close.svg" alt="">
       </button>
